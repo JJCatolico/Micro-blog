@@ -5,6 +5,25 @@
 		<link rel="stylesheet" href="">
 	</head>
 	<body>
+	<header>
+	<div class="user-welcome"> 
+	Welcome, <%= @current_user ? @current_user.username : "Guest" %>
+	</div>
+	<nav>
+	<ul>
+	<% if  logged_in? %>
+		<a href="/logout">Logout</a></li>
+		<li>
+	<% else %>
+		<a href="/signup">Signup</a></li>
+		<li>
+		<a href="/login">Login</a></li>
+		<li>
+		<% end %>
+	</ul>
+		
+	</nav>
+	</header>
 		<%= yield %>
 		<script src=""></script>
 	</body>
