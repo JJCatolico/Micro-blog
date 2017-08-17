@@ -7,19 +7,21 @@
 	<body>
 	<header>
 	<div class="user-welcome"> 
-	Welcome, <%= @current_user ? @current_user.username : "Guest" %>
+	Welcome, <%= current_user ? current_user.username : "Guest" %>
 	</div>
 	<nav>
 	<ul>
 	<% if  logged_in? %>
-		<a href="/logout">Logout</a></li>
-		<li>
+		<li><a href="/logout">Logout</a></li>
 	<% else %>
+		<li>
 		<a href="/signup">Signup</a></li>
 		<li>
 		<a href="/login">Login</a></li>
 		<li>
-		<% end %>
+		<a href="/posts">Post</a></li>
+
+	<% end %>
 	</ul>
 		
 	</nav>
