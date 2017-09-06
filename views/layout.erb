@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<title></title>
-		<link rel="stylesheet" href="">
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 	<header>
-	<div class="user-welcome"> 
-	Welcome, <%= current_user ? current_user.username : "Guest" %>
+	<div class="user-welcome">
+	<!-- Welcome, --> <%= current_user ? current_user.username : "" %>
 	</div>
 	<nav>
 	<ul>
@@ -19,11 +19,11 @@
 		<li>
 		<a href="/login">Login</a></li>
 		<li>
-		<a href="/posts">Post</a></li>
+		<a href="/posts/new">Post</a></li>
 
 	<% end %>
 	</ul>
-		
+
 	</nav>
 	</header>
 		<%= yield %>
