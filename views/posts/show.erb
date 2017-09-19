@@ -4,13 +4,9 @@
 
     <h3> Post </h3>
             <br>
-            <h4> User: <a href="/users/<%= @user.id %>"> <%= @user.username %> </a> </h4>
+            <h4> User: <%= @user.username %> </h4>
             <hr>
             <p> <%= @post.text %> </p>
-            <br>
-            <% if current_user %>
-                <a href="/posts/<%= @post.id %>/edit"><button class="btn btn-lg btn-primary btn-edit">Edit Post</button></a>
-            <% end %>
 
   </div>
 </div>

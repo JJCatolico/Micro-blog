@@ -13,13 +13,16 @@
 	<ul>
 	<% if  logged_in? %>
 		<li><a href="/logout">Logout</a></li>
+		<li>
+		<a href="/posts/new">Post</a></li>
+		<li>
+		<a href="/posts">All post</a></li>
 	<% else %>
 		<li>
 		<a href="/signup">Signup</a></li>
 		<li>
 		<a href="/login">Login</a></li>
-		<li>
-		<a href="/posts/new">Post</a></li>
+
 
 	<% end %>
 	</ul>

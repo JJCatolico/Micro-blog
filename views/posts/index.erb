@@ -1,0 +1,11 @@
+<% if current_user %>
+<% @posts.each do |post| %>
+    <h3><a href="/users/<%= post.user.id %>"> <%= post.user.username %> </a> </h3>
+    <hr>
+    <p><%= post.text%></p>
+    <br>
+<% end %>
+<% else %>
+  <a href="/login"><button class="btn btn-lg btn-primary">Login</button></a>
+  <a href="/signup"><button class="btn btn-lg btn-primary">Sign up</button></a>
+<% end %>

@@ -60,9 +60,15 @@ end
 
 
 get '/' do
-  @posts = Post.all.last(10).sort_by { |r| r.id }.reverse
   erb :index
 end
+
+get '/posts' do
+  @posts = Post.all.last(10).sort_by { |r| r.id }.reverse
+  @post = Post.find_by_id(params[:id])
+  erb :"/posts/index"
+end
+
 
 post '/posts' do
   user = User.find_by_id(session[:user_id])
